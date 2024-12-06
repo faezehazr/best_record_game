@@ -8,26 +8,10 @@ if not os.path.exists(desktop_path):
         file.write("")  
 with open(desktop_path, "r") as file:
     lines = file.readlines()
-# print(type(lines))
-# print(len(lines))
-# print(lines[0])
-# print(type(lines[0]))
-# print(eval(lines[0]))
-# print(type(eval(lines[0])))
 dictionaries=[]
 for data in lines:
     #print(eval(data))
     dictionaries.append(eval(data))
-# min_time = 100
-# min_data = None  # برای ذخیره دیکشنری با کمترین زمان
-# for data in dictionaries:
-#     if data["time"] < min_time:
-#         min_time = data["time"]
-#         min_data = data  # ذخیره دیکشنری جدید با کمترین زمان
-
-# if min_data:
-#     print(min_data)
-# print(min_time)
 min_time = 100
 dict_bestrecord = None
 for data in dictionaries:
