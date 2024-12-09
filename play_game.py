@@ -18,9 +18,12 @@ for data in dictionaries:
     if data["time"] < min_time:
         min_time = data["time"]
         dict_bestrecord = data
-print(min_time)
-print(dict_bestrecord)
-print(f"the best record is belong to {dict_bestrecord["name"]} with {dict_bestrecord["time"]} seconds")
+if dict_bestrecord:
+    print(min_time)
+    print(dict_bestrecord)
+    print(f"the best record is belong to {dict_bestrecord["name"]} with {dict_bestrecord["time"]} seconds")
+else:
+    print("No records found in the file.")
 user_name = input("enter yr name: ")
 random_num=random.randint(0,100)
 print(random_num)
